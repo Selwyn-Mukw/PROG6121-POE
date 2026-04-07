@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Welcome to the Cyber security Hub my Name is Ori and I will guide you through this project");
         }
     }
 }
