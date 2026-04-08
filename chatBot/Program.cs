@@ -8,10 +8,11 @@ namespace chatBot
     {
         static void Main(string[] args)
         {
+            // Create audio which will be played when the user starts the program
             SoundPlayer player = new SoundPlayer(@"C:\Users\mukwe\Downloads\CyberGreeting.wav");
-            player.Load();
+            player.Play();
             player.PlaySync();
-            //Console.WriteLine("Welcome to the Cyber security Hub my Name is Ori and I will teach you how to be safe online ");
+            
         }
     }
 }
