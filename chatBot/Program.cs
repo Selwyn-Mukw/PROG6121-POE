@@ -8,19 +8,33 @@ namespace chatBot
     {
         static void Main(string[] args)
         {
-            // Create audio which will be played when the user starts the program
-            SoundPlayer player = new SoundPlayer(@"C:\Users\mukwe\Downloads\CyberGreeting.wav");
-            player.Play();
-            player.PlaySync();
+            //call the method to play the audio file
+            AudioPlayer player = new AudioPlayer();
+            player.PlayAudio(@"C:\Users\mukwe\Downloads\CyberGreeting.wav");
 
             //We will create an ACSII inmage which will display apon launching the application
             Console.WriteLine($"  █████████               ██████            █████                  ███████████  ███                     █████   \r\n ███░░░░░███             ███░░███          ░░███                  ░░███░░░░░░█ ░░░                     ░░███    \r\n░███    ░░░   ██████    ░███ ░░░   ██████  ███████   █████ ████    ░███   █ ░  ████  ████████   █████  ███████  \r\n░░█████████  ░░░░░███  ███████    ███░░███░░░███░   ░░███ ░███     ░███████   ░░███ ░░███░░███ ███░░  ░░░███░   \r\n ░░░░░░░░███  ███████ ░░░███░    ░███████   ░███     ░███ ░███     ░███░░░█    ░███  ░███ ░░░ ░░█████   ░███    \r\n ███    ░███ ███░░███   ░███     ░███░░░    ░███ ███ ░███ ░███     ░███  ░     ░███  ░███      ░░░░███  ░███ ███\r\n░░█████████ ░░████████  █████    ░░██████   ░░█████  ░░███████     █████       █████ █████     ██████   ░░█████ \r\n ░░░░░░░░░   ░░░░░░░░  ░░░░░      ░░░░░░     ░░░░░    ░░░░░███    ░░░░░       ░░░░░ ░░░░░     ░░░░░░     ░░░░░  \r\n                                                      ███ ░███                                                  \r\n                                                     ░░██████                                                   \r\n                                                      ░░░░░░                                                    ");
 
             //ask user for there name
-            Console.Write("What is your name ?");
+            Console.Write("Enter your name: ");
             string name = Console.ReadLine();
 
             Console.WriteLine($"Hello {name} Welcome to the cyber security hub.");
+
+            
+
+            }
+        }
+    // create a class which will play an audio file when the user starts the program
+    class AudioPlayer
+
+    {
+        public void PlayAudio(string filePath)
+        {
+            // Create audio which will be played when the user starts the program
+            SoundPlayer player = new SoundPlayer(filePath);
+            player.Play();
+            //player.PlaySync();
         }
     }
     
