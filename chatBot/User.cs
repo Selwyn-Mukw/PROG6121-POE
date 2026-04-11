@@ -11,7 +11,9 @@ namespace chatBot
     {
         public void welcomeMessage()
         {
-            //ask user for there name
+            /*ask user for there name
+             * The colour will also be modified to make the user experience more enjoyable and to make the text more visible on the console
+             */
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Write("Please Enter your name: ");
@@ -57,7 +59,7 @@ namespace chatBot
                     return;
                 }
 
-                // Create a switch statement which will display the deffinitions to the question the user asked
+                // Create a switch statement which will display the definition of each number listed in the menu should the user select a number between 1-10
 
                 switch (choice)
                 {
