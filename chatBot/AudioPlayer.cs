@@ -15,7 +15,7 @@ namespace chatBot
                 // Create audio which will be played when the user starts the program
                 SoundPlayer player = new SoundPlayer(filePath);
                 player.Play();
-                //player.PlaySync();
+                
             }
         }
  }
