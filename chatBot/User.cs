@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace chatBot
@@ -14,7 +15,12 @@ namespace chatBot
             string name = Console.ReadLine();
 
             Console.WriteLine($"Hello {name} Welcome to the cyber security hub.");
+            
         }
+
+        
+        // Create a class which will contain the menu of questions the user can ask the chatbot
+        
         public void DisplayMenu()
         {
             Console.WriteLine("1. What is cyber security?");
@@ -28,6 +34,45 @@ namespace chatBot
             Console.WriteLine("9. What is two-factor authentication?");
             Console.WriteLine("10. How can I protect my personal data online?");
             Console.WriteLine("11. What is a social engineering attack?");
+
+            Console.Write("\n choose a number on the menu to ask the chatbot a question: ");
+            string choice = Console.ReadLine();
+
+            // Create a switch statement which will display the deffinitions to the question the user asked
+            switch (choice)
+            {
+                case "1":
+                    Console.WriteLine("Cyber security is the practice of protecting computers, networks, and data from unauthorized access, use, disclosure, disruption, modification, or destruction.");
+                    break;
+                case "2":
+                    Console.WriteLine("Phishing is a type of cyber attack that uses email or other forms of communication to trick people into providing sensitive information, such as passwords or credit card numbers.");
+                    break;
+                case "3":
+                    Console.WriteLine("Malware is a type of software that is designed to harm or exploit any programmable device, service, or network. It can take many forms, including viruses, worms, trojans, ransomware, and spyware.");
+                    break;
+                case "4":
+                    Console.WriteLine("Ransomware is a type of malware that encrypts a victim's files and demands payment in exchange for the decryption key.");
+                    break;
+                case "5":
+                    Console.WriteLine("A firewall is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules.");
+                    break;
+                case "6":
+                    Console.WriteLine("A VPN (Virtual Private Network) is a technology that creates a secure and encrypted connection over a less secure network, such as the internet. It allows users to protect their online privacy and access restricted content.");
+                    break;
+                case "7":
+                    Console.WriteLine("To protect yourself from cyber attacks, you should use strong passwords, keep your software up to date, be cautious when clicking on links or downloading attachments, and use a reputable antivirus program.");
+                    break;
+                case "8":
+                    Console.WriteLine("To create a strong password, you should use a combination of upper and lower case letters, numbers, and special characters. Avoid using common words or phrases, and make sure your password is at least 12 characters long.");
+                    break;
+                case "9":
+                    Console.WriteLine("Two-factor authentication (2FA) is an extra layer of security that requires not only a password but also something else that only the user has access to, such as a fingerprint or a one-time code sent to their phone.");
+                    break;
+                case "10":
+                    Console.WriteLine("To protect your personal data online, you should be cautious about what information you share on social media and other websites. Use privacy settings to control who can see your information, and be wary of phishing scams that try to steal your personal data.");
+                    break;
+            }
         }
     }
 }
+
