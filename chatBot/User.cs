@@ -12,7 +12,9 @@ namespace chatBot
         public void welcomeMessage()
         {
             //ask user for there name
-            Console.Write("Enter your name: ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.Write("Please Enter your name: ");
             string name = Console.ReadLine();
 
             Console.WriteLine($"\nHello {name} Welcome to the cyber security hub.Below are some  topics which may spark your interest");
@@ -26,31 +28,40 @@ namespace chatBot
             //if what the user selects )number is 1-10 is true then the code below in the condition will execute while if its false 
             while (true)
             {
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.WriteLine("\n======================================================");
                 Console.WriteLine("\n1. What is cyber security?");
-                Console.WriteLine("2. What is phishing?");
-                Console.WriteLine("3. What is malware?");
-                Console.WriteLine("4. What is ransomware?");
-                Console.WriteLine("5. What is a firewall?");
-                Console.WriteLine("6. What is a VPN?");
-                Console.WriteLine("7. how do I protect myself from cyber attacks?");
-                Console.WriteLine("8. How do I create a strong password?");
-                Console.WriteLine("9. What is two-factor authentication?");
-                Console.WriteLine("10. How can I protect my personal data online?");
+                Console.WriteLine("\n2. What is phishing?");
+                Console.WriteLine("\n3. What is malware?");
+                Console.WriteLine("\n4. What is ransomware?");
+                Console.WriteLine("\n5. What is a firewall?");
+                Console.WriteLine("\n6. What is a VPN?");
+                Console.WriteLine("\n7. how do I protect myself from cyber attacks?");
+                Console.WriteLine("\n8. How do I create a strong password?");
+                Console.WriteLine("\n9. What is two-factor authentication?");
+                Console.WriteLine("\n10. How can I protect my personal data online?");
+                Console.WriteLine("\n======================================================");
 
-
-                Console.Write("\nPlease choose a number on the menu to ask Ori the chatbot a question: or press '0' to exit: ");
+                Console.WriteLine("\n*********************************************************************************************");
+                Console.Write("Please choose a number on the menu to ask Ori the chatbot a question: or press '0' to exit: ");
+                Console.WriteLine("\n*********************************************************************************************");
                 string choice = Console.ReadLine();
 
                 //This will execute should the user press 0 to exit the program
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.BackgroundColor = ConsoleColor.Black;
                 if (choice == "0")
                 {
-                    Console.WriteLine("Thank you for using the cyber security hub. Stay safe online!");
+                    Console.WriteLine("\nThank you for using the cyber security hub. Stay safe online!");
                     return;
                 }
 
                 // Create a switch statement which will display the deffinitions to the question the user asked
+
                 switch (choice)
                 {
+
                     case "1":
                         Console.WriteLine("\n1.Cyber security is the practice of protecting computers, networks, and data from unauthorized access, use, disclosure, disruption, modification, or destruction.");
                         break;
@@ -84,6 +95,8 @@ namespace chatBot
 
                     //This Line of code will execute should a user input a number <10 .so should you say 11 then it will print the statement below, exception handling
                     default:
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        Console.BackgroundColor = ConsoleColor.Black;
                         Console.WriteLine("\nInvalid choice.We currently dont have that option.");
                         break;
 
