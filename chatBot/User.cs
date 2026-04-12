@@ -3,21 +3,26 @@ using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 
 namespace chatBot
 {
-    //create a class which will display a menu of questions the user can ask the chatbot
+    //create a class which will have two methods a welcomemessage and menu of questions method which the user can ask the chatbot
     public class User
     {
         public void welcomeMessage()
         {
             /*ask user for there name
              * The colour will also be modified to make the user experience more enjoyable and to make the text more visible on the console
+             * Also add a 5 second delay in line 22 to make the user experience more enjoyable and to give the user time to read the ASCII image before being prompted to enter their name
+             * Also add a 2 second delay in the responsiveness of the app in line 23
              */
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.BackgroundColor = ConsoleColor.Black;
+            Thread.Sleep(5000);
             Console.Write("Please Enter your name: ");
             string name = Console.ReadLine();
+            Thread.Sleep(2000);
 
             Console.WriteLine($"\nHello {name} Welcome to the cyber security hub.\nI will be helping you remain safe online .Below are some topics which can help you learn more about Cyber Security");
 
@@ -26,7 +31,7 @@ namespace chatBot
         // Create a class which will contain the menu of questions the user can ask the chatbot
         public void DisplayMenu()
         {
-            //if what the user selects )number is 1-10 is true then the code below in the condition will execute while if its false 
+            //if what the user selects )number is 1-10 is true then the code below in the condition will execute while if its false it will execute line 100
             while (true)
             {
                 Console.ForegroundColor = ConsoleColor.Cyan;
@@ -43,11 +48,15 @@ namespace chatBot
                 Console.WriteLine("\n9. What is two-factor authentication?");
                 Console.WriteLine("\n10. How can I protect my personal data online?");
                 Console.WriteLine("\n======================================================");
+                Thread.Sleep(1000);
 
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.BackgroundColor = ConsoleColor.Black;
                 Console.WriteLine("\n*********************************************************************************************");
                 Console.Write("Please choose a number on the menu to ask Ori the chatbot a question: or press '0' to exit: ");
                 Console.WriteLine("\n*********************************************************************************************");
                 string choice = Console.ReadLine();
+                Thread.Sleep(1000);
 
                 //This will execute should the user press 0 to exit the program
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -98,6 +107,7 @@ namespace chatBot
                         Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.BackgroundColor = ConsoleColor.Black;
                         Console.WriteLine("\nInvalid choice.We currently dont have that option.");
+                        Thread.Sleep(1000);
                         break;
 
                 }
