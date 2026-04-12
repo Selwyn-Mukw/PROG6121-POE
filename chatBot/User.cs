@@ -19,12 +19,11 @@ namespace chatBot
             Console.Write("Please Enter your name: ");
             string name = Console.ReadLine();
 
-            Console.WriteLine($"\nHello {name} Welcome to the cyber security hub.Below are some  topics which may spark your interest");
+            Console.WriteLine($"\nHello {name} Welcome to the cyber security hub.\nI will be helping you remain safe online .Below are some topics which can help you learn more about Cyber Security");
 
         }
 
         // Create a class which will contain the menu of questions the user can ask the chatbot
-
         public void DisplayMenu()
         {
             //if what the user selects )number is 1-10 is true then the code below in the condition will execute while if its false 
@@ -60,7 +59,6 @@ namespace chatBot
                 }
 
                 // Create a switch statement which will display the definition of each number listed in the menu should the user select a number between 1-10
-
                 switch (choice)
                 {
 
